@@ -1,0 +1,131 @@
+/* ******************** Header ******************/
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#head0{
+    width: 100%;
+  padding: 0 12px;
+    background-color:#7719AB;
+}
+#head0 ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin:0px;
+    padding: 0px;
+}
+#head0 li{
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bolder;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#head0 ul li button{
+    background-color: #7719AB;
+    border: 1px #7719AB solid;
+}
+#head0 ul li img{
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+/* ******************** TopNavBar ******************/
+
+.topNavBar {
+    width: 100%;
+    background-color: #f3f2f1;
+    padding: 10px 12px 0 12px;
+    overflow: auto;
+}
+
+.topNavBar a {
+    margin: 0;
+    color: #383736;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    padding: 8px 20px;
+}
+
+.topBarText {
+    display: inline;
+    padding: 5px;
+}
+
+#share{
+    margin-right: 20px;
+    background-color: #7719AB;
+    color: white;
+    float: right !important;
+    padding: 0.4% !important;
+}
+#share:hover{
+    background-color: #67217A !important;
+}
+
+/* ******************** BottomNavBar ******************/
+
+.bottomNav {
+    width: 100%;
+    display: inline-flex;
+    overflow: auto;
+    background-color: #f3f2f1;
+    padding: 0 5px 0px 20px;
+    align-items: center;
+    box-shadow: 0px 2px 2px #888888;
+}
+
+.bottomObj {
+    display: inline-flex;
+    width: fit-content;
+    overflow: auto;
+    padding : 1px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.bottomNav img {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+
+.vl {
+    display: inline;
+    height: 25px;
+    margin-right : 5px;
+    border-left: 1px solid #383736;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.fonts {
+    background-Color: white;
+     outline: black solid 1px;
+}
+
+.hovering:hover {
+    background-color: #EDEBE9;
+}
+
+
+/* ******************** SideBar ******************/
+
+.leftBar{
+    background-color: #f3f2f1;
+    width: 7vh;
+    height: 100vh;
+}
+
