@@ -106,7 +106,7 @@ body{
     border-left: 1px solid #383736;
 }
 
-input:focus {
+.bottomNav input:focus {
     border: none;
     outline: none;
 }
@@ -126,19 +126,27 @@ input:focus {
 .leftBar{
     width: fit-content;
     background-color: #f3f2f1;
-    height: 100vh;
+    height: 81vh;
+    border-Right : 0.5px solid  #f3f2f1;
 }
 
 .sideIcon {
     padding: 10px;
-    /* color: #67217A;
-    background-color: #EDEBE9;
-    border-left: 5px solid #67217A ; */
 }
 
 .currentTab {
     color: #67217A;
     background-color:#d2d0ce;
     border-left: 5px solid #67217A ;
+}
+
+.notebooks {
+    box-shadow: 0px 0px 2px #888888;
+    height: 81vh;
+    width: 50vh;
+    display: inline-flex;
+    background-color: #faf9f8;
+    border-right : 1px solid  #f3f2f1;
+    border-top: 1px solid  #f3f2f1 ;
 }
 
