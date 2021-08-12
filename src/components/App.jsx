@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import TopNavBar from "./TopBar/TopNavBar";
-import SideBar from "./SideBar";
+import SideBar from "./SideBarFiles/SideBar";
 import BottomNavBar from "./BottomBar/BottomNavBar";
 
 function App() {
