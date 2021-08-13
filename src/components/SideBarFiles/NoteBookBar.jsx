@@ -1,6 +1,5 @@
 import React from "react";
 import MenuBookIcon from '@material-ui/icons/MenuBook';
-import NoteIcon from '@material-ui/icons/Note';
 import Notebooks from "./NoteBooks";
 
 function NoteBooks(props) {
