@@ -10,7 +10,7 @@ import Emoji from "./Emoji";
 import OfficeAddIn from "./officeAddIn";
 import MeetingDetails from "./Meeting";
 
-function IndexBar() {
+function InsertBar() {
     return <div className="bottomNav" style={{ height: "52px" }}>
         <Tables />
         <AttatchFile />
@@ -25,4 +25,4 @@ function IndexBar() {
     </div>
 }
 
-export default IndexBar;
+export default InsertBar;
