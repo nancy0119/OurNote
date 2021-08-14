@@ -3,6 +3,7 @@ import Header from "./Header";
 import TopNavBar from "./TopBar/TopNavBar";
 import SideBar from "./SideBarFiles/SideBar";
 import BottomNavBar from "./BottomBar/BottomNavBar";
+import Canvas from "./Canvas";
 
 function App() {
 
@@ -15,7 +16,11 @@ function App() {
         <Header />
         <TopNavBar current={currentBar} onChange={handleClick} />
         <BottomNavBar current={currentBar} />
-        <SideBar />
+        <div style={{ display: "flex" }}>
+            <SideBar style={{ position: "fixed" }} />
+            <Canvas />
+        </div>
+
     </div>;
 }
 
