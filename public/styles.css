@@ -150,3 +150,7 @@ body{
     border-top: 1px solid  #f3f2f1 ;
 }
 
+#canvas {
+    border: 2px solid black;
+}
+
