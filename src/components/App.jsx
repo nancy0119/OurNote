@@ -12,12 +12,12 @@ function App() {
     function handleClick(newBar) {
         setCurrentBar(newBar);
     }
-    return <div>
+    return <div className="fixed-content">
         <Header />
         <TopNavBar current={currentBar} onChange={handleClick} />
         <BottomNavBar current={currentBar} />
         <div style={{ display: "flex" }}>
-            <SideBar style={{ position: "fixed" }} />
+            <SideBar />
             <Canvas />
         </div>
 

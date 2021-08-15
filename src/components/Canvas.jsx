@@ -7,15 +7,14 @@ function Canvas() {
     const canvasRef = useRef(null);
     const contextRef = useRef(null);
 
-    const [width, setWidth] = useState(window.innerWidth * 2);
-    const [height, setHeight] = useState(window.innerHeight * 2);
+    const [width, setWidth] = useState(1440);
+    const [height, setHeight] = useState(585);
 
     useEffect(() => {
         const canvas = canvasRef.current
-        // canvas.width = window.innerWidth * 2;
-        // canvas.height = window.innerHeight * 2;
-        canvas.style.width = `${window.innerWidth}px`;
-        canvas.style.height = `${window.innerHeight}px`;
+
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
 
         const context = canvas.getContext("2d")
         context.scale(2, 2);
@@ -43,23 +42,27 @@ function Canvas() {
             return;
         }
         const { offsetX, offsetY } = nativeEvent;
+
         contextRef.current.lineTo(offsetX, offsetY);
         contextRef.current.stroke();
+
     };
 
 
 
-    return <canvas
-        ref={canvasRef}
-        id="canvas"
-        width={width}
-        height={height}
-        onMouseDown={startDrawing}
-        onMouseUp={finishDrawing}
-        onMouseMove={draw}
-    >
+    return <div style={{ maxHeight: "585px", maxWidth: "1040px", overflow: "auto" }}>
+        <canvas
+            ref={canvasRef}
+            id="canvas"
+            width={width * 2}
+            height={height * 2}
+            onMouseDown={startDrawing}
+            onMouseUp={finishDrawing}
+            onMouseMove={draw}
+        >
 
-    </canvas>
+        </canvas>
+    </div>
 }
 
 export default Canvas;
