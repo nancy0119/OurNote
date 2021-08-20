@@ -125,7 +125,10 @@ body{
     background-color: #EDEBE9;
 }
 
-
+.color{
+    width: 20px;
+    /* height: 20px; */
+}
 /* ******************** SideBar ******************/
 
 .leftBar{
