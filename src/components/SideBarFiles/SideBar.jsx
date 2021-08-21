@@ -4,39 +4,24 @@ import SearchIcon from '@material-ui/icons/Search';
 import NoteBooks from "./NoteBookBar";
 import SearchBar from "./SearchBar";
 
-function SideBar() {
+function SideBar(props) {
 
-    const [isBookSelected, setBookSelected] = useState(true);
-    const [isSearchSelected, setSearchSelected] = useState(false);
 
     function handleBookToggle() {
-        setBookSelected(prevValue => {
-            if (!prevValue) {
-                setSearchSelected(false);
-                return true;
-            }
-            return false;
-        });
+        props.bookClick();
     }
 
     function handleSearchToggle() {
-        setSearchSelected(prevValue => {
-            if (!prevValue) {
-                setBookSelected(false);
-                return true;
-            }
-
-            return false;
-        });
+        props.searchClick();
     }
 
     return <div style={{ display: "inline-flex" }}>
         <div className="leftBar">
-            <LibraryBooksIcon onClick={handleBookToggle} className={isBookSelected ? "sideIcon currentTab hovering" : "sideIcon hovering"} style={{ display: "block" }} />
-            <SearchIcon onClick={handleSearchToggle} className={isSearchSelected ? "sideIcon currentTab hovering" : "sideIcon hovering"} />
+            <LibraryBooksIcon onClick={handleBookToggle} className={props.book ? "sideIcon currentTab hovering" : "sideIcon hovering"} style={{ display: "block" }} />
+            <SearchIcon onClick={handleSearchToggle} className={props.search ? "sideIcon currentTab hovering" : "sideIcon hovering"} />
         </div>
-        <NoteBooks isVisible={isBookSelected} />
-        <SearchBar isVisible={isSearchSelected} />
+        <NoteBooks isVisible={props.book} />
+        <SearchBar isVisible={props.search} />
     </div>
 
 }

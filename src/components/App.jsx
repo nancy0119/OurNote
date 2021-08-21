@@ -12,13 +12,43 @@ function App() {
     function handleClick(newBar) {
         setCurrentBar(newBar);
     }
+
+    const [isBookSelected, setBookSelected] = useState(true);
+    const [isSearchSelected, setSearchSelected] = useState(false);
+
+    const [canvasMaxWidth, setMaxWidth] = useState(1066);
+
+    function handleBookToggle() {
+        setBookSelected(prevValue => {
+            if (!prevValue) {
+                setSearchSelected(false);
+                setMaxWidth(1066);
+                return true;
+            }
+            setMaxWidth(1448);
+            return false;
+        });
+    }
+
+    function handleSearchToggle() {
+        setSearchSelected(prevValue => {
+            if (!prevValue) {
+                setBookSelected(false);
+                setMaxWidth(1180);
+                return true;
+            }
+            setMaxWidth(1448);
+            return false;
+        });
+    }
+
     return <div className="fixed-content">
         <Header />
         <TopNavBar current={currentBar} onChange={handleClick} />
         <BottomNavBar current={currentBar} />
         <div style={{ display: "flex" }}>
-            <SideBar />
-            <Canvas />
+            <SideBar book={isBookSelected} search={isSearchSelected} bookClick={handleBookToggle} searchClick={handleSearchToggle} />
+            <Canvas maxWidth={canvasMaxWidth} />
         </div>
 
     </div>;
