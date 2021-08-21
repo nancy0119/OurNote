@@ -44,7 +44,7 @@ body{
 .topNavBar {
     width: 100%;
     background-color: #f3f2f1;
-    padding: 10px 0 0 12px;
+    padding: 10px 0 12px 12px;
     overflow: auto;
 }
 

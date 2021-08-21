@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 
-function Canvas() {
+function Canvas(props) {
 
     const [isDrawing, setIsDrawing] = useState(false)
 
     const canvasRef = useRef(null);
     const contextRef = useRef(null);
 
-    const [width, setWidth] = useState(1440);
+    const [width, setWidth] = useState(2000);
     const [height, setHeight] = useState(585);
 
     useEffect(() => {
@@ -50,7 +50,7 @@ function Canvas() {
 
 
 
-    return <div style={{ maxHeight: "585px", maxWidth: "1040px", overflow: "auto" }}>
+    return <div style={{ maxHeight: "585px", maxWidth: props.maxWidth.toString() + "px", overflow: "auto" }}>
         <canvas
             ref={canvasRef}
             id="canvas"
